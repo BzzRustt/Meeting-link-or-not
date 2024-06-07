@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Alert</title>
+    <style>
+ /* Style for the page */
+        body {
+            background-color: lightcoral; /* Change the background color to light red */
+        }
+
+        /* Style for the pop-up */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white; /* Change the background color to light red */
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            animation: popUpAnimation 0.5s ease-in-out; /* Add animation */
+        }
+
+        /* Animation keyframes */
+        @keyframes popUpAnimation {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Style for the pop-up text */
+        .popup p {
+            font-size: 200%; /* Increase the text size to 200% */
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Pop-up -->
+    <div class="popup">
+        <p> <b>You've been phished again and now on temporary probation! </b> <p>Refer to the TQ on security or contact the sender of the link to rectify actions to get back on good standing</p>.</p>
+    </div>
+
+    <!-- JavaScript to show the pop-up -->
+    <script>
+        window.onload = function() {
+            var popup = document.querySelector('.popup');
+            popup.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
